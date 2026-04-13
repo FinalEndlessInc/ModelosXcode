@@ -1,0 +1,93 @@
+{
+  "9914E577-3950-49C9-B37A-66F07DD170F6" : {
+    "objectMetadataList" : [
+      [
+        "9914E577-3950-49C9-B37A-66F07DD170F6",
+        "Root",
+        "rotacion_infinita",
+        "Track2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "9914E577-3950-49C9-B37A-66F07DD170F6",
+        "Root",
+        "anim_2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "9914E577-3950-49C9-B37A-66F07DD170F6",
+        "Root",
+        "anim_2",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "9914E577-3950-49C9-B37A-66F07DD170F6",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "9914E577-3950-49C9-B37A-66F07DD170F6",
+        "Root",
+        "rotacion_infinita",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "9914E577-3950-49C9-B37A-66F07DD170F6",
+        "Root",
+        "rotacion_infinita"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "9914E577-3950-49C9-B37A-66F07DD170F6",
+        "Root",
+        "anim_1"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "9914E577-3950-49C9-B37A-66F07DD170F6",
+        "Root",
+        "anim_1",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "B2EABB44-FE99-4C16-AE9E-91EAA4A30A91" : {
+    "objectMetadataList" : [
+      [
+        "B2EABB44-FE99-4C16-AE9E-91EAA4A30A91",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}
