@@ -1,7 +1,8 @@
 {
-  "advancedEditorSelectedIdentifier" : "BehaviorsPluginID",
+  "advancedEditorSelectedIdentifier" : "ProjectBrowser",
   "openSceneRelativePaths" : [
-    "escena.usda"
+    "escena.usda",
+    "planetario\/escena.usda"
   ],
   "recentIdentifiers" : {
     "9914E577-3950-49C9-B37A-66F07DD170F6" : [
@@ -12,6 +13,74 @@
     ]
   },
   "sceneCameraHistory" : {
+    "41304736-1441-4B92-9A7D-4CBD7F2C561C" : [
+      {
+        "date" : 797952795.204035,
+        "title" : "Untitled",
+        "transform" : [
+          0.8946297,
+          -7.521805e-09,
+          0.44680834,
+          0,
+          0.17370398,
+          0.92133653,
+          -0.34780183,
+          0,
+          -0.4116608,
+          0.38876623,
+          0.824255,
+          0,
+          -1.1348346,
+          1.1173689,
+          2.043952,
+          1
+        ]
+      },
+      {
+        "date" : 797952789.117629,
+        "title" : "Untitled",
+        "transform" : [
+          0.8946297,
+          -7.521805e-09,
+          0.44680834,
+          0,
+          0.17370398,
+          0.92133653,
+          -0.34780183,
+          0,
+          -0.4116608,
+          0.38876623,
+          0.824255,
+          0,
+          -1.1196893,
+          1.2256715,
+          2.000435,
+          1
+        ]
+      },
+      {
+        "date" : 797952785.551709,
+        "title" : "Untitled",
+        "transform" : [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0.7071069,
+          -0.70710677,
+          0,
+          0,
+          0.70710677,
+          0.7071069,
+          0,
+          -0.10789633,
+          1.9977934,
+          1.6597875,
+          1
+        ]
+      }
+    ],
     "9914E577-3950-49C9-B37A-66F07DD170F6" : [
       {
         "date" : 797784036.914092,
@@ -459,5 +528,6 @@
   },
   "sceneViewportBackgroundColors" : {
 
-  }
+  },
+  "selectedSceneRelativePath" : "escena.usda"
 }

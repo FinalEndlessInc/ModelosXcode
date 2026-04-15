@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CosoVrrApp: App {
+    @State var controlador_general = ControladorAplicacion()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(controlador_general)
         }
     }
 }
