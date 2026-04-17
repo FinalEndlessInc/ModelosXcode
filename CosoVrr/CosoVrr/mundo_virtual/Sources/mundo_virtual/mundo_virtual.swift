@@ -13,3 +13,11 @@ public let planetas = [
     "escena",
     "escena"
 ]
+
+enum Notificaciones{
+    case da_un_salto
+}
+
+let Notificacion: [Notificaciones: String] = [
+    Notificaciones.da_un_salto: "boing"
+]
