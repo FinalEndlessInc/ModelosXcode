@@ -9,17 +9,17 @@ class MaquinaEstadosAnimacion: MaquinaEstadosGenerica{
     var controlador_general: (any ProcesarComandos)?
     
     var estados_disponibles: [String: Estado] = [
-        ReposoAnimacion.nombre: ReposoAnimacion(<#any MaquinaEstadosGenerica#>),
-        SaltoAnimacion.nombre: SaltoAnimacion(<#any MaquinaEstadosGenerica#>)
+        ReposoAnimacion.nombre: ReposoAnimacion(),
+        SaltoAnimacion.nombre: SaltoAnimacion()
     ]
     var estado_actual: Estado? = nil
     
     init(){
         estado_actual = estados_disponibles[ReposoAnimacion.nombre]
-        // estado_actual?.contexto = self
+        estado_actual?.contexto = self
     }
     
-    func realizar_cambio_estado(nombre_del_estado_nuevo: String) {
+    func realizar_cambio_estado(a nombre_del_estado_nuevo: String) {
         guard let estado_nuevo = estados_disponibles[nombre_del_estado_nuevo] else{
             fatalError("Parecer que el estado \(nombre_del_estado_nuevo) no esta disponible o registrado")
         }

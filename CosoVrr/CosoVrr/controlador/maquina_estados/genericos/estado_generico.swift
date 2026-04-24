@@ -6,7 +6,7 @@
 //
 
 protocol Estado{
-    var contexto: MaquinaEstadosGenerica {get set}
+    var contexto: MaquinaEstadosGenerica? {get set}
     
     func inicializar() -> Void
     

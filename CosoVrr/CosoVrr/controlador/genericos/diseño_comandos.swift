@@ -9,7 +9,7 @@ import SwiftUI
 protocol ProcesarComandos{
     func realizar_comando(tipo: Comandos, carga_util: String) -> Bool
     
-    func realizar_comando(_ comando, carga_util:String) -> Bool
+    func realizar_comando(_ comando: Comando) -> Bool
 }
 
 enum Comandos{

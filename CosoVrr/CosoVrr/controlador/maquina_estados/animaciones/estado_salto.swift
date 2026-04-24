@@ -6,12 +6,12 @@
 //
 
 class SaltoAnimacion: Estado{
-    var contexto: any MaquinaEstadosGenerica
+    var contexto: (any MaquinaEstadosGenerica)? = nil
     
     static let nombre = "Salto"
     
-    init(_ contexto: MaquinaEstadosGenerica){
-        self.contexto = contexto
+    init(){
+       
     }
     
     func inicializar() {
@@ -23,7 +23,7 @@ class SaltoAnimacion: Estado{
     func finalizar() {}
     
     func reaccion(estimulo: String) {
-        <#code#>
+        
     }
     
     
