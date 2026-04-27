@@ -46,6 +46,26 @@ struct ContentView: View {
             }label:{
                 Text("Salten calaquitas").foregroundStyle(Color.blue)
             }
+            
+            Button{
+                controlador.realizar_comando(tipo: .activar_animacion, carga_util: "rotaX")
+            }label:{
+                Text("Roten cabron calacas").foregroundStyle(Color.blue)
+            }
+            
+            Button{
+                controlador.realizar_comando(tipo: .activar_animacion, carga_util: "desaparece")
+            }label:{
+                Text("Vayanse, shuu").foregroundStyle(Color.blue)
+            }
+            
+            
+            Button{
+                controlador.realizar_comando(tipo: .activar_animacion, carga_util: "estiramiento")
+            }label:{
+                Text("Estirense calacas").foregroundStyle(Color.blue)
+            }
+            
         }
         
         HStack{

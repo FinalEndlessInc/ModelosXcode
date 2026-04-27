@@ -27,7 +27,9 @@ extension ControladorAplicacion: ProcesarComandos{
         switch comanda.tipo{
         case .activar_animacion:
             activar_comportamiento(comanda.carga_util)
-            historial_comandos.append(comanda)
+            historial_comandos.append(
+                comanda
+            )
             return true
             
         default:

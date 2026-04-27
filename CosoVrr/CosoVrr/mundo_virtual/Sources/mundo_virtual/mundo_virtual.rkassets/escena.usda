@@ -10,7 +10,7 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["Skull", "brillitos", "anim_1", "rotacion_infinita", "anim_2"]
+    reorder nameChildren = ["Skull", "brillitos", "anim_1", "rotacion_infinita", "anim_2", "anim_3", "anim_4", "anim_5", "anim_6"]
     def "Skull" (
         active = true
         references = @Skull.usdz@
@@ -217,6 +217,10 @@ def Xform "Root"
         rel behaviors = [
             </Root/OnAddedToScene>,
             </Root/OnNotification>,
+            </Root/OnNotification2>,
+            </Root/OnNotification3>,
+            </Root/OnNotification4>,
+            </Root/OnNotification5>,
         ]
         uniform token info:id = "RCP.BehaviorsContainer"
     }
@@ -330,6 +334,275 @@ def Xform "Root"
             rel affectedObjects = </Root>
             rel animationLibraryKey = </Root/anim_2>
             rel animationLibraryKeyOverrideKey = </Root/OnNotification/Trigger>
+            token info:id = "PlayTimeline"
+            int loops = 0
+            int performCount = 1
+            token type = "serial"
+        }
+    }
+
+    def RealityKitTimeline "anim_3"
+    {
+        reorder nameChildren = ["Track", "Track2"]
+        def RealityKitTrack "Track"
+        {
+            def RealityKitAction "Spin"
+            {
+                string actionKind = "spin"
+                int blendLayer = 400
+                double duration = 1
+                uniform token info:id = "AEA71A20-9BEE-4E3B-8DB5-94A2E837A3DF"
+                float3 localAxis = (0, 1, 5)
+                double startTime = 0
+                rel target = </Root/Skull>
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+
+            def RealityKitAction "Notification"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "C3A3FE98-3A3B-49A4-9E2E-EF38075C37C6"
+                string notificationName = "RotaX"
+                double startTime = 2
+                rel target = </Root>
+            }
+        }
+    }
+
+    def Preliminary_Behavior "OnNotification2"
+    {
+        rel actions = </Root/OnNotification2/Action>
+        uniform bool exclusive
+        rel triggers = </Root/OnNotification2/Trigger>
+
+        def Preliminary_Trigger "Trigger"
+        {
+            rel affectedObjects = </Root>
+            string identifier = "rotaX"
+            token info:id = "Notification"
+        }
+
+        def Preliminary_Action "Action"
+        {
+            rel affectedObjects = </Root>
+            rel animationLibraryKey = </Root/anim_3>
+            rel animationLibraryKeyOverrideKey = </Root/OnNotification2/Trigger>
+            token info:id = "PlayTimeline"
+            int loops = 0
+            int performCount = 1
+            token type = "serial"
+        }
+    }
+
+    def RealityKitTimeline "anim_4"
+    {
+        def RealityKitTrack "Track"
+        {
+            def RealityKitAction "Hide"
+            {
+                string actionKind = "hide"
+                int blendLayer = 300
+                double duration = 0.5
+                uniform token info:id = "948BA763-0E4C-423A-8D47-BF3B94BADE48"
+                double startTime = 0
+                rel target = </Root/Skull>
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+
+            def RealityKitAction "Notification"
+            {
+                string actionKind = "notification"
+                uniform token info:id = "3A2F399B-1AA7-46AF-89E1-C80BA5026074"
+                string notificationName = "Desaparece"
+                double startTime = 2
+                rel target = </Root/Skull>
+            }
+
+            def RealityKitAction "Show"
+            {
+                string actionKind = "show"
+                int blendLayer = 300
+                double duration = 0.5
+                uniform token info:id = "75480C00-588B-4075-AEE8-8A43460BC76B"
+                double startTime = 0.6871128941441441
+                rel target = </Root/Skull>
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+        }
+    }
+
+    def Preliminary_Behavior "OnNotification3"
+    {
+        rel actions = </Root/OnNotification3/Action>
+        uniform bool exclusive
+        rel triggers = </Root/OnNotification3/Trigger>
+
+        def Preliminary_Trigger "Trigger"
+        {
+            rel affectedObjects = </Root>
+            string identifier = "desaparece"
+            token info:id = "Notification"
+        }
+
+        def Preliminary_Action "Action"
+        {
+            rel affectedObjects = </Root>
+            rel animationLibraryKey = </Root/anim_4>
+            rel animationLibraryKeyOverrideKey = </Root/OnNotification3/Trigger>
+            token info:id = "PlayTimeline"
+            int loops = 0
+            int performCount = 1
+            token type = "serial"
+        }
+    }
+
+    def RealityKitTimeline "anim_5"
+    {
+        reorder nameChildren = ["Track", "Track2"]
+        def RealityKitTrack "Track"
+        {
+            def RealityKitAction "Spin"
+            {
+                string actionKind = "spin"
+                int blendLayer = 400
+                double duration = 1
+                uniform token info:id = "222DA890-ADB1-4375-AF73-BA0E4811C127"
+                float3 localAxis = (1, 1, 0)
+                token spinDirection = "counterclockwise"
+                double startTime = 0
+                rel target = </Root/Skull>
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+
+            def RealityKitAction "Notification"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "D1D1549C-6682-4E91-AB8D-72BD5346221D"
+                string notificationName = "rotaZ"
+                double startTime = 1.9992257882882882
+                rel target = </Root/Skull>
+            }
+        }
+    }
+
+    def Preliminary_Behavior "OnNotification4"
+    {
+        rel actions = </Root/OnNotification4/Action>
+        uniform bool exclusive
+        rel triggers = </Root/OnNotification4/Trigger>
+
+        def Preliminary_Trigger "Trigger"
+        {
+            rel affectedObjects = </Root>
+            string identifier = "rotaZ"
+            token info:id = "Notification"
+        }
+
+        def Preliminary_Action "Action"
+        {
+            rel affectedObjects = </Root>
+            rel animationLibraryKey = </Root/anim_5>
+            rel animationLibraryKeyOverrideKey = </Root/OnNotification4/Trigger>
+            token info:id = "PlayTimeline"
+            int loops = 0
+            int performCount = 1
+            token type = "serial"
+        }
+    }
+
+    def RealityKitTimeline "anim_6"
+    {
+        def RealityKitTrack "Track"
+        {
+            def RealityKitAction "Transform_To"
+            {
+                string actionKind = "moveTo"
+                int blendLayer = 300
+                double duration = 0.5
+                uniform token info:id = "607B914E-009B-4357-A2C4-1CB410DB16C2"
+                float3 position = (-0.0023427717, 0, 0.007656932)
+                quatf rotation = (1, 0, 0, 0)
+                float3 scale = (1.5, 1, 1)
+                double startTime = 0
+                rel target = </Root/Skull>
+
+                def RealityKitStruct "transformMode"
+                {
+                    rel referenceEntity = </Root>
+                    token type = "parent"
+                }
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+
+            def RealityKitAction "Transform_To2"
+            {
+                string actionKind = "moveTo"
+                int blendLayer = 300
+                double duration = 0.5
+                uniform token info:id = "1A3E4226-3A7E-4255-BE35-EC2D908A508B"
+                float3 position = (-0.0023427717, 0, 0.007656932)
+                quatf rotation = (1, 0, 0, 0)
+                float3 scale = (1, 1, 1)
+                double startTime = 0.5000000001
+                rel target = </Root/Skull>
+
+                def RealityKitStruct "transformMode"
+                {
+                    rel referenceEntity = </Root>
+                    token type = "parent"
+                }
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+
+            def RealityKitAction "Notification"
+            {
+                string actionKind = "notification"
+                uniform token info:id = "9D93272B-EB98-42E6-A85D-C21DF07C171F"
+                string notificationName = "Estiramiento"
+                double startTime = 2
+                rel target = </Root/Skull>
+            }
+        }
+    }
+
+    def Preliminary_Behavior "OnNotification5"
+    {
+        rel actions = </Root/OnNotification5/Action>
+        uniform bool exclusive
+        rel triggers = </Root/OnNotification5/Trigger>
+
+        def Preliminary_Trigger "Trigger"
+        {
+            rel affectedObjects = </Root>
+            string identifier = "estiramiento"
+            token info:id = "Notification"
+        }
+
+        def Preliminary_Action "Action"
+        {
+            rel affectedObjects = </Root>
+            rel animationLibraryKey = </Root/anim_6>
+            rel animationLibraryKeyOverrideKey = </Root/OnNotification5/Trigger>
             token info:id = "PlayTimeline"
             int loops = 0
             int performCount = 1

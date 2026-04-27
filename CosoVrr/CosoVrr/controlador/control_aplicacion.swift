@@ -12,19 +12,23 @@ import mundo_virtual
 @Observable
 @MainActor
 public class ControladorAplicacion{
-    // public var escenario: Entity? = nil
+    public var escenario: RealityViewCameraContent? = nil
+    
     public var raiz_escena: Entity = Entity()
     
     public var estado: EstadosAplicacion = .iniciando
     
     private var planetas_cargados: [Entity] = []
+    var entidades_ancla: [AnchorEntity] = []
     
     public var historial_comandos: [Comando] = []
     
-    var estados_animacion: MaquinaEstadosGenerica = MaquinaEstadosAnimacion()
+    var maquinas_de_estados: [MaquinaEstadosGenerica] = [MaquinaEstadosAnimacion()]
     
     init(){
-        estados_animacion.controlador_general = self as ProcesarComandos
+        for indice in 0...maquinas_de_estados.count - 1{
+            maquinas_de_estados[indice].controlador_general = self as ProcesarComandos
+        }
         
         Task.detached(priority: .high){
             await self.cargar_planetas()
@@ -57,6 +61,12 @@ public class ControladorAplicacion{
     func alejar_planetas(lejitud: Float){
         for planeta_cargado in planetas_cargados {
             planeta_cargado.position.z = -lejitud
+        }
+    }
+    
+    func actualizar_estados(_ mensaje: String){
+        for maquina in maquinas_de_estados{
+            maquina.actualizar(mensaje)
         }
     }
 }

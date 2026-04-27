@@ -20,6 +20,10 @@ struct SeguimientoImagenes: View {
             ancla.addChild(modelo_a_colocar)
             contenido.add(ancla)
         }
+        .gesture(SpatialTapGesture().targetedToAnyEntity().onEnded({
+            accion_realizada in
+            print("Accion realizada es: \(accion_realizada.entity)")
+        }))
         .background(Color.black)
     }
 }

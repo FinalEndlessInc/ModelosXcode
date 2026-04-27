@@ -9,7 +9,7 @@ import SwiftUI
 protocol ProcesarComandos{
     func realizar_comando(tipo: Comandos, carga_util: String) -> Bool
     
-    func realizar_comando(_ comando: Comando) -> Bool
+    func realizar_comando(_ comanda: Comando) -> Bool
 }
 
 enum Comandos{
@@ -20,6 +20,7 @@ enum Comandos{
 
 public struct Comando: Identifiable{
     public let id = UUID()
+    
     let tipo: Comandos
     let carga_util: String
 }

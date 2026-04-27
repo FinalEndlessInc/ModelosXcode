@@ -12,7 +12,7 @@ struct CosoVrrApp: App {
     @State var controlador_general = ControladorAplicacion()
     var body: some Scene {
         WindowGroup {
-            SeguimientoImagenes()
+            ContentView()
                 .environment(controlador_general)
         }
     }

@@ -10,7 +10,11 @@ class MaquinaEstadosAnimacion: MaquinaEstadosGenerica{
     
     var estados_disponibles: [String: Estado] = [
         ReposoAnimacion.nombre: ReposoAnimacion(),
-        SaltoAnimacion.nombre: SaltoAnimacion()
+        SaltoAnimacion.nombre: SaltoAnimacion(),
+        CalacasDesaparecidas.nombre: CalacasDesaparecidas(),
+        CalacasEstiradas.nombre: CalacasEstiradas(),
+        RotaXAnimacion.nombre: RotaXAnimacion()
+        
     ]
     var estado_actual: Estado? = nil
     
